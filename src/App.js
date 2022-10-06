@@ -53,14 +53,14 @@ function Form({ setTodos, todos }) {
   );
 }
 
-function List({ setTodo, todos }) {
+function List({ setTodos, todos }) {
   console.log(todos);
   return (
     <div className="todo-list">
       <h1>Todo List</h1>
       <div className="list-wrapper">
         {todos.map((todo) => (
-          <Todo todo={todo} setTodo={setTodo}></Todo>
+          <Todo todo={todo} setTodos={setTodos}></Todo>
         ))}
       </div>
     </div>
