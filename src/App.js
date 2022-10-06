@@ -11,7 +11,7 @@ function App() {
   return (
     <Layout>
       <Form todos={todos} setTodos={setTodos}></Form>
-      <List todos={todos} setTodos={setTodos}></List>
+      <List todos={todos}></List>
     </Layout>
   );
 }
@@ -53,14 +53,14 @@ function Form({ setTodos, todos }) {
   );
 }
 
-function List({ setTodos, todos }) {
+function List({ todos }) {
   console.log(todos);
   return (
     <div className="todo-list">
       <h1>Todo List</h1>
       <div className="list-wrapper">
         {todos.map((todo) => (
-          <Todo todo={todo} setTodos={setTodos}></Todo>
+          <Todo todo={todo}></Todo>
         ))}
       </div>
     </div>
